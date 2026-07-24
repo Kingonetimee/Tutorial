@@ -25,11 +25,11 @@ play = True
 while play:
     for turtle in all_turtles:
         # Move each turtle a random distance
-        distance = r.randint(1, 10)
+        distance = r.randint(1, 20)
         turtle.forward(distance)
 
         # Check if this turtle crossed the finish line (X-coordinate > 220)
-        if turtle.xcor() > 220:
+        if turtle.xcor() > 230:
             play = False
             winning_color = turtle.pencolor()
 
