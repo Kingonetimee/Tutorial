@@ -8,10 +8,18 @@ class Food(Turtle):
         self.shape("circle")
         self.penup()
         self.shapesize(0.5, 0.5) 
-        self.color("blue")
+        self.color("red")
         self.speed(0)
         self.refresh()
-        
+
+    
+    def big(self):
+        self.shape("circle")
+        self.penup()
+        self.shapesize(2, 2) 
+        self.color("red")
+        self.speed(0)
+
 
     def refresh(self):
         r_x = r.randint(-250, 250)
