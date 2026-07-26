@@ -2,6 +2,7 @@ import turtle as t
 from paddle import Paddle
 from ball import Ball
 from score import Score
+from line import Line
 import time
 
 
@@ -16,6 +17,7 @@ l_paddle = Paddle(-380, 0)
 r_paddle = Paddle(370, 0)
 ball = Ball()
 score = Score()
+line = Line()
 
 screen.onkey(l_paddle.up, "w")
 screen.onkey(l_paddle.down, "s")
@@ -36,11 +38,11 @@ while game:
         ball.play_back()
 
    
-    if ball.xcor() > 400: 
+    if ball.xcor() > 360: 
         score.left_score()
         ball.reset_position()
         
-    if ball.xcor() < -400:
+    if ball.xcor() < -360:
         score.right_score()
         ball.reset_position()
         
