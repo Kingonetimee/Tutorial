@@ -22,7 +22,16 @@ class Snake:
             bodies = self.bodies() 
             bodies.goto(position)
             self.seg.append(bodies)  
-            
+
+    def reset(self):
+        for seg in self.seg:
+            seg.goto(1000, 1000)
+        self.seg.clear()
+        self.create_snake()
+        self.head = self.seg[0]
+        self.tail = self.seg[1 : len(self.seg)]
+        
+           
     def bodies(self):
         new_turtle = Turtle(shape="square")
         new_turtle.color("white")
